@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  background: #050807;
+  color: white;
+}
+
+/* soft emerald ambient glow */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(circle at top, rgba(5, 103, 70, 0.15), transparent 50%),
+              radial-gradient(circle at bottom, rgba(16,185,129,0.08), transparent 60%);
+}
+
+/* glowing blobs */
+.blob1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99,102,241,0.35), transparent 60%);
+  filter: blur(90px);
+  top: -200px;
+  left: -200px;
+}
+
+.blob2 {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(236,72,153,0.25), transparent 60%);
+  filter: blur(120px);
+  bottom: -250px;
+  right: -250px;
+}
+
+/* subtle noise */
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
