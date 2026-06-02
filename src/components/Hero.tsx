@@ -26,14 +26,14 @@ export default function Hero() {
 
               translate-y-6 md:translate-y-10
 
-              opacity-90 md:opacity-100
+              opacity-70 md:opacity-100
 
               md:[mask-image:linear-gradient(to_left,black_70%,transparent_100%)]
             "
           />
 
           {/* softer overlay (LESS DARK) */}
-          <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/20 to-transparent md:from-black/70 md:via-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent md:from-black/70 md:via-black/30" />
 
         </div>
 
@@ -42,7 +42,10 @@ export default function Hero() {
       {/* CONTENT */}
       <div className="relative z-10 container-custom min-h-screen flex items-center">
 
-        <div className="max-w-[720px] space-y-8">
+        {/* MOBILE READABILITY LAYER */}
+        <div className="absolute inset-0 md:hidden bg-black/40" />
+
+        <div className="relative max-w-[720px] space-y-8">
 
           <p className="text-emerald-400 uppercase tracking-[0.35em] text-xs">
             Full-Stack Developer
@@ -53,7 +56,7 @@ export default function Hero() {
             <span className="text-emerald-400">Havryna</span>
           </h1>
 
-          <p className="text-white/60 text-lg max-w-xl leading-relaxed">
+          <p className="text-white/70 md:text-white/60 text-lg max-w-xl leading-relaxed">
             I’m a Junior Full-Stack Developer specializing in building modern web applications using React, Next.js, and Node.js.
             I create fast, responsive and scalable digital products with APIs, backend logic, and databases — from landing pages to full-stack platforms.
           </p>
