@@ -1,46 +1,236 @@
 @import "tailwindcss";
 
-body {
-  background: #050807;
-  color: white;
+:root {
+  --background: #050807;
+  --foreground: #ffffff;
+
+  --emerald-primary: #10b981;
+  --emerald-light: #34d399;
+  --emerald-dark: #065f46;
+
+  --container: 1440px;
 }
 
-/* soft emerald ambient glow */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* =========================================
+   CONTAINER SYSTEM
+========================================= */
+
+.container-custom {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-inline: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-custom {
+    padding-inline: 80px;
+  }
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
 .bg {
   position: fixed;
   inset: 0;
-  z-index: -2;
-  background: radial-gradient(circle at top, rgba(5, 103, 70, 0.15), transparent 50%),
-              radial-gradient(circle at bottom, rgba(16,185,129,0.08), transparent 60%);
+  z-index: -3;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(16, 185, 129, 0.18),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(52, 211, 153, 0.12),
+      transparent 50%
+    ),
+    #050807;
 }
 
-/* glowing blobs */
+/* =========================================
+   EMERALD BLOBS
+========================================= */
+
 .blob1 {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(99,102,241,0.35), transparent 60%);
-  filter: blur(90px);
-  top: -200px;
-  left: -200px;
+  width: 700px;
+  height: 700px;
+
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.22),
+    transparent 65%
+  );
+
+  filter: blur(120px);
+
+  top: -250px;
+  left: -250px;
 }
 
 .blob2 {
   position: absolute;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(236,72,153,0.25), transparent 60%);
-  filter: blur(120px);
-  bottom: -250px;
-  right: -250px;
+  width: 800px;
+  height: 800px;
+
+  background: radial-gradient(
+    circle,
+    rgba(52, 211, 153, 0.18),
+    transparent 65%
+  );
+
+  filter: blur(150px);
+
+  bottom: -300px;
+  right: -300px;
 }
 
-/* subtle noise */
+/* =========================================
+   NOISE
+========================================= */
+
 .noise {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  opacity: 0.04;
+
+  z-index: -2;
+
+  opacity: 0.03;
+
   pointer-events: none;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+
+  background-image: url(
+    "https://grainy-gradients.vercel.app/noise.svg"
+  );
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.hero-title {
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #34d399,
+    #10b981
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  backdrop-filter: blur(20px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  border-radius: 9999px;
+
+  background: #10b981;
+
+  color: #000;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #34d399;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  border-radius: 9999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* =========================================
+   BREAKPOINTS
+========================================= */
+
+/* Mobile */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 42px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 72px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .hero-title {
+    font-size: 96px;
+  }
 }

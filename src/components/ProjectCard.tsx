@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 type Project = {
   title: string;
   description: string;
@@ -19,35 +18,52 @@ export default function ProjectCard({
   live,
 }: Project) {
   return (
-    <div className="
-      rounded-xl overflow-hidden
-      border border-white/10
-      bg-white/5
-      hover:border-white/30
-      transition
-    ">
+    <div
+      className="
+        group
+        rounded-2xl
+        overflow-hidden
+
+        border border-white/10
+        bg-white/5
+
+        backdrop-blur-xl
+
+        transition-all duration-300
+
+        hover:-translate-y-2
+        hover:border-emerald-500/30
+        hover:bg-white/[0.07]
+
+        shadow-sm hover:shadow-emerald-500/10
+      "
+    >
 
       {/* IMAGE */}
-      <div className="h-48 overflow-hidden">
+      <div className="relative h-48 overflow-hidden">
         <img
           src={image}
           alt={title}
           className="
             w-full h-full object-cover
-            hover:scale-105
-            transition duration-500
+
+            transition duration-700
+            group-hover:scale-110
           "
         />
+
+        {/* IMAGE OVERLAY */}
+        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
       </div>
 
       {/* CONTENT */}
-      <div className="p-5 space-y-3">
+      <div className="p-5 space-y-4">
 
-        <h3 className="font-bold text-lg">
+        <h3 className="text-lg font-semibold text-white">
           {title}
         </h3>
 
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-white/60 leading-relaxed">
           {description}
         </p>
 
@@ -57,9 +73,14 @@ export default function ProjectCard({
             <span
               key={item}
               className="
-                text-xs px-2 py-1 rounded-full
+                text-xs
+                px-2 py-1
+                rounded-full
+
                 border border-white/10
-                text-gray-300
+                bg-white/5
+
+                text-white/70
               "
             >
               {item}
@@ -68,15 +89,19 @@ export default function ProjectCard({
         </div>
 
         {/* LINKS */}
-        <div className="flex gap-4 text-sm pt-2">
+        <div className="flex gap-5 pt-2">
 
           {github && (
             <a
               href={github}
               target="_blank"
-              className="text-indigo-400 hover:underline"
+              className="
+                text-sm text-white/60
+                hover:text-emerald-400
+                transition
+              "
             >
-              GitHub
+              GitHub →
             </a>
           )}
 
@@ -84,9 +109,13 @@ export default function ProjectCard({
             <a
               href={live}
               target="_blank"
-              className="text-white hover:underline"
+              className="
+                text-sm text-white/60
+                hover:text-white
+                transition
+              "
             >
-              Live
+              Live →
             </a>
           )}
 
