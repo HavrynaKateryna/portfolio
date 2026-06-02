@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 type Project = {
   title: string;
   description: string;
@@ -17,111 +19,138 @@ export default function ProjectCard({
   github,
   live,
 }: Project) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div
-      className="
-        group
-        rounded-2xl
-        overflow-hidden
+    <>
+      {/* CARD */}
+      <div
+        onClick={() => setOpen(true)}
+        className="
+          group cursor-pointer
+          rounded-3xl overflow-hidden
 
-        border border-white/10
-        bg-white/5
+          border border-white/10
+          bg-white/5
+          backdrop-blur-xl
 
-        backdrop-blur-xl
+          transition-all duration-300
+          hover:-translate-y-2
+          hover:border-emerald-500/30
+          hover:bg-white/[0.08]
+        "
+      >
 
-        transition-all duration-300
+        {/* IMAGE */}
+        <div className="relative h-64 overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="
+              w-full h-full object-cover
+              scale-105
+              transition duration-700
+              group-hover:scale-110
+            "
+          />
 
-        hover:-translate-y-2
-        hover:border-emerald-500/30
-        hover:bg-white/[0.07]
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
-        shadow-sm hover:shadow-emerald-500/10
-      "
-    >
+          <h3 className="absolute bottom-4 left-4 text-xl font-semibold text-white">
+            {title}
+          </h3>
+        </div>
 
-      {/* IMAGE */}
-      <div className="relative h-48 overflow-hidden">
-        <img
-          src={image}
-          alt={title}
+        {/* CONTENT */}
+        <div className="p-5 space-y-4">
+
+          <p className="text-sm text-white/60">
+            {description}
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {stack.map((item) => (
+              <span
+                key={item}
+                className="text-xs px-2 py-1 rounded-full border border-white/10 bg-white/5 text-white/70"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex gap-5 pt-2">
+
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                onClick={(e) => e.stopPropagation()}
+                className="text-sm text-white/60 hover:text-emerald-400"
+              >
+                GitHub →
+              </a>
+            )}
+
+            {live && (
+              <a
+                href={live}
+                target="_blank"
+                onClick={(e) => e.stopPropagation()}
+                className="text-sm text-white/60 hover:text-white"
+              >
+                Live →
+              </a>
+            )}
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* LIGHTBOX / MODAL */}
+      {open && (
+        <div
           className="
-            w-full h-full object-cover
+            fixed inset-0 z-50
+            bg-black/80
+            backdrop-blur-md
 
-            transition duration-700
-            group-hover:scale-110
+            flex items-center justify-center
+            p-6
           "
-        />
+          onClick={() => setOpen(false)}
+        >
 
-        {/* IMAGE OVERLAY */}
-        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
-      </div>
+          <div className="relative max-w-5xl w-full">
 
-      {/* CONTENT */}
-      <div className="p-5 space-y-4">
-
-        <h3 className="text-lg font-semibold text-white">
-          {title}
-        </h3>
-
-        <p className="text-sm text-white/60 leading-relaxed">
-          {description}
-        </p>
-
-        {/* STACK */}
-        <div className="flex flex-wrap gap-2">
-          {stack.map((item) => (
-            <span
-              key={item}
+            {/* CLOSE */}
+            <button
+              onClick={() => setOpen(false)}
               className="
-                text-xs
-                px-2 py-1
-                rounded-full
-
-                border border-white/10
-                bg-white/5
-
-                text-white/70
+                absolute -top-10 right-0
+                text-white/70 hover:text-white
+                text-sm
               "
             >
-              {item}
-            </span>
-          ))}
-        </div>
+              Close ✕
+            </button>
 
-        {/* LINKS */}
-        <div className="flex gap-5 pt-2">
-
-          {github && (
-            <a
-              href={github}
-              target="_blank"
+            {/* IMAGE */}
+            <img
+              src={image}
+              alt={title}
               className="
-                text-sm text-white/60
-                hover:text-emerald-400
-                transition
+                w-full max-h-[80vh]
+                object-contain
+                rounded-2xl
+                shadow-2xl
               "
-            >
-              GitHub →
-            </a>
-          )}
-
-          {live && (
-            <a
-              href={live}
-              target="_blank"
-              className="
-                text-sm text-white/60
-                hover:text-white
-                transition
-              "
-            >
-              Live →
-            </a>
-          )}
+            />
+          </div>
 
         </div>
-
-      </div>
-    </div>
+      )}
+    </>
   );
 }

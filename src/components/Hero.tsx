@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="absolute left-[-200px] top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-emerald-500/20 blur-[140px]" />
       </div>
 
-      {/* IMAGE (controlled composition) */}
+      {/* IMAGE */}
       <div className="absolute inset-0 flex justify-end">
 
         <div className="relative w-full md:w-1/2 h-full">
@@ -21,10 +21,7 @@ export default function Hero() {
             className="
               w-full h-full object-cover
 
-              /* FIXED MOBILE CROP */
               object-[60%_20%]
-
-              /* DESKTOP */
               md:object-[70%_20%]
 
               opacity-80
@@ -34,7 +31,6 @@ export default function Hero() {
             "
           />
 
-          {/* soft overlay for readability */}
           <div className="absolute inset-0 bg-gradient-to-l from-black via-black/40 to-transparent" />
 
         </div>
@@ -56,17 +52,14 @@ export default function Hero() {
           </h1>
 
           <p className="text-white/60 text-lg max-w-xl leading-relaxed">
-            Junior Full-Stack Developer focused on React, Next.js and TypeScript.
-            I build clean, modern and scalable web applications.
+            I’m a Junior Full-Stack Developer specializing in building modern web applications using React, Next.js, and Node.js.
+            I create fast, responsive and scalable digital products with APIs, backend logic, and databases — from landing pages to full-stack platforms.
           </p>
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
 
-            <a
-              href="/contact"
-              className="btn-primary"
-            >
+            <a href="/contact" className="btn-primary">
               Contact me
             </a>
 

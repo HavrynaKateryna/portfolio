@@ -73,7 +73,7 @@ export default function RootLayout({
         <Header />
 
         {/* MAIN CONTENT */}
-        <main className="relative z-10 pt-16">
+        <main className="relative z-10 pt-0">
           {children}
         </main>
 

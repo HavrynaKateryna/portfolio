@@ -1,36 +1,41 @@
 export const projects = [
   {
     title: "Auth App",
-    description: "Authentication system with protected routes",
-    image: "/projects/auth.png",
-    stack: ["Next.js", "TypeScript", "Zustand", "React Query"],
-    github: "https://github.com/HavrynaKateryna/09-auth",
-    live: "https://09-auth-2yso.vercel.app/sign-up",
-  },
-
-  {
-    title: "Leleka",
-    description: "Pregnancy tracking dashboard",
-    image: "/projects/leleka.png",
-    stack: ["Next.js", "Formik", "Yup"],
-    live: "https://stork-frontend.vercel.app/",
+    description:
+      "Authentication system with protected routes and login/register flow.",
+    image: "/projects/auth.jpg",
+    stack: ["Next.js", "TypeScript", "Zustand"],
+    github: "https://github.com/...",
+    live: "https://...",
   },
 
   {
     title: "CoffeeJoy",
-    description: "Team-based web application with Agile workflow",
-    image: "/projects/coffeejoy.png",
-    stack: ["JavaScript", "HTML", "CSS", "Git"],
-    github: "https://github.com/Riky-Droyg/coffeejoy-project",
-    live: "https://riky-droyg.github.io/coffeejoy-project",
+    description:
+      "Team-based web app with UI components and workflow management.",
+    image: "/projects/coffejoy.jpg",
+    stack: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/...",
+    live: "https://...",
   },
 
   {
-    title: "Khatynka Lapok",
-    description: "Animal adoption web application with API integration",
-    image: "/projects/animals.png",
-    stack: ["JavaScript (ES6+)", "REST API", "HTML", "CSS"],
-    github: "https://github.com/denis-ovcharov/animals-goit-project",
-    live: "https://denis-ovcharov.github.io/animals-goit-project",
+    title: "Lapky",
+    description:
+      "Interactive web app with API integration and dynamic UI.",
+    image: "/projects/lapky.jpg",
+    stack: ["JavaScript", "REST API"],
+    github: "https://github.com/...",
+    live: "https://...",
+  },
+
+  {
+    title: "Leleka",
+    description:
+      "Responsive frontend project with modern layout and clean UI.",
+    image: "/projects/leleka.jpg",
+    stack: ["HTML", "CSS", "JS"],
+    github: "https://github.com/...",
+    live: "https://...",
   },
 ];
