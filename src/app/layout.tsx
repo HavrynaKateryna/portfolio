@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 export const metadata = {
   title: {
-    default: "Kateryna Portfolio",
+    default: " Kateryna Havryna",
     template: "%s | Kateryna Havryna",
   },
   description:
