@@ -27,7 +27,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Kateryna Portfolio",
+    title: "Kateryna Havryna",
     description:
       "Full-Stack Developer specializing in React, Next.js and TypeScript",
     url: "https://your-domain.com",
