@@ -26,14 +26,14 @@ export default function Hero() {
 
               translate-y-6 md:translate-y-10
 
-              opacity-80
-              md:opacity-100
+              opacity-90 md:opacity-100
 
-              [mask-image:linear-gradient(to_left,black_60%,transparent_100%)]
+              md:[mask-image:linear-gradient(to_left,black_70%,transparent_100%)]
             "
           />
 
-          <div className="absolute inset-0 bg-gradient-to-l from-black via-black/40 to-transparent" />
+          {/* softer overlay (LESS DARK) */}
+          <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/20 to-transparent md:from-black/70 md:via-black/30" />
 
         </div>
 
