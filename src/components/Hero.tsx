@@ -24,6 +24,8 @@ export default function Hero() {
               object-[60%_20%]
               md:object-[70%_20%]
 
+              translate-y-6 md:translate-y-10
+
               opacity-80
               md:opacity-100
 
