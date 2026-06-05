@@ -20,20 +20,15 @@ export default function Hero() {
             alt="Kateryna"
             className="
               w-full h-full object-cover
-
               object-[60%_20%]
               md:object-[70%_20%]
-
               translate-y-6 md:translate-y-10
-
-              opacity-70 md:opacity-100
-
+              opacity-95 md:opacity-100
               md:[mask-image:linear-gradient(to_left,black_70%,transparent_100%)]
             "
           />
 
-          {/* softer overlay (LESS DARK) */}
-          <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent md:from-black/70 md:via-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent md:from-black/70 md:via-black/40" />
 
         </div>
 
@@ -42,7 +37,7 @@ export default function Hero() {
       {/* CONTENT */}
       <div className="relative z-10 container-custom min-h-screen flex items-center">
 
-        {/* MOBILE READABILITY LAYER */}
+        {/* MOBILE DARK SAFE ZONE */}
         <div className="absolute inset-0 md:hidden bg-black/40" />
 
         <div className="relative max-w-[720px] space-y-8">
@@ -51,12 +46,19 @@ export default function Hero() {
             Full-Stack Developer
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="
+            text-5xl md:text-7xl font-bold leading-tight
+            drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]
+          ">
             Kateryna<br />
             <span className="text-emerald-400">Havryna</span>
           </h1>
 
-          <p className="text-white/70 md:text-white/60 text-lg max-w-xl leading-relaxed">
+          <p className="
+            text-white/90 md:text-white/60
+            text-lg max-w-[520px] leading-relaxed
+            drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]
+          ">
             I’m a Junior Full-Stack Developer specializing in building modern web applications using React, Next.js, and Node.js.
             I create fast, responsive and scalable digital products with APIs, backend logic, and databases — from landing pages to full-stack platforms.
           </p>

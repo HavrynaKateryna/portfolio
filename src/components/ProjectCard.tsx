@@ -29,25 +29,22 @@ export default function ProjectCard({
         className="
           group cursor-pointer
           rounded-3xl overflow-hidden
-
           border border-white/10
-          bg-white/5
-          backdrop-blur-xl
+          bg-transparent
 
           transition-all duration-300
-          hover:-translate-y-2
-          hover:border-emerald-500/30
-          hover:bg-white/[0.08]
+          hover:border-emerald-500/40
+          hover:-translate-y-1
         "
       >
-
         {/* IMAGE */}
         <div className="relative h-64 overflow-hidden">
           <img
             src={image}
             alt={title}
             className="
-              w-full h-full object-cover
+              w-full h-full
+              object-cover object-center
               scale-105
               transition duration-700
               group-hover:scale-110
@@ -63,8 +60,7 @@ export default function ProjectCard({
 
         {/* CONTENT */}
         <div className="p-5 space-y-4">
-
-          <p className="text-sm text-white/60">
+          <p className="text-sm text-white/60 leading-relaxed">
             {description}
           </p>
 
@@ -72,7 +68,11 @@ export default function ProjectCard({
             {stack.map((item) => (
               <span
                 key={item}
-                className="text-xs px-2 py-1 rounded-full border border-white/10 bg-white/5 text-white/70"
+                className="
+                  text-xs px-2 py-1 rounded-full
+                  border border-white/10
+                  text-white/70
+                "
               >
                 {item}
               </span>
@@ -80,13 +80,12 @@ export default function ProjectCard({
           </div>
 
           <div className="flex gap-5 pt-2">
-
             {github && (
               <a
                 href={github}
                 target="_blank"
                 onClick={(e) => e.stopPropagation()}
-                className="text-sm text-white/60 hover:text-emerald-400"
+                className="text-sm text-white/60 hover:text-emerald-400 transition"
               >
                 GitHub →
               </a>
@@ -97,34 +96,28 @@ export default function ProjectCard({
                 href={live}
                 target="_blank"
                 onClick={(e) => e.stopPropagation()}
-                className="text-sm text-white/60 hover:text-white"
+                className="text-sm text-white/60 hover:text-white transition"
               >
                 Live →
               </a>
             )}
-
           </div>
-
         </div>
       </div>
 
-      {/* LIGHTBOX / MODAL */}
+      {/* LIGHTBOX */}
       {open && (
         <div
           className="
             fixed inset-0 z-50
             bg-black/80
             backdrop-blur-md
-
             flex items-center justify-center
             p-6
           "
           onClick={() => setOpen(false)}
         >
-
           <div className="relative max-w-5xl w-full">
-
-            {/* CLOSE */}
             <button
               onClick={() => setOpen(false)}
               className="
@@ -136,19 +129,16 @@ export default function ProjectCard({
               Close ✕
             </button>
 
-            {/* IMAGE */}
             <img
               src={image}
               alt={title}
               className="
                 w-full max-h-[80vh]
-                object-contain
+                object-contain object-center
                 rounded-2xl
-                shadow-2xl
               "
             />
           </div>
-
         </div>
       )}
     </>
