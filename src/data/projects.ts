@@ -18,7 +18,7 @@ export const projects = [
     description:
       "Landing page for tree cutting services with order forms and responsive React UI.",
     image: "/projects/treeservice.jpg",
-    stack: ["React", "JavaScript", "CSS"],
+    stack: ["React", "TypeScript", "React Router", "Framer Motion", "Axios", "EmailJS"],
     github: "https://github.com/HavrynaKateryna/treecut-site",
     live: "https://treecut-site-fgt5.vercel.app/",
     
