@@ -86,6 +86,15 @@ export default function Hero() {
               LinkedIn
             </a>
 
+            {/* DOWNLOAD FLYER */}
+            <a
+              href="/Kateryna-Havryna-Flyer.pdf"
+              download="Kateryna-Havryna-Flyer.pdf"
+              className="btn-secondary"
+            >
+              Download flyer
+            </a>
+
           </div>
 
         </div>

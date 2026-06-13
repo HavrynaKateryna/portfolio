@@ -8,7 +8,7 @@ export const projects = [
     
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Formik", "TanStack Query"],
     github: "https://github.com/HavrynaKateryna/rental-car",
-    live: "https://rental-car-xnnt.vercel.app/",
+    live: "https://rental-car-5lyr.vercel.app/",
   
   },
 

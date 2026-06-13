@@ -8,6 +8,9 @@ import {
 } from "react-icons/fi";
 
 export default function Contact() {
+
+  const flyerPath = "/Kateryna-Havryna-Flyer.pdf";
+
   return (
     <section className="container-custom py-24 md:py-32">
 
@@ -24,6 +27,33 @@ export default function Contact() {
             If you want to collaborate, hire me, or just say hi — feel free to reach out.
             I usually respond within 24 hours.
           </p>
+
+          {/* FLYER BLOCK (ADDED) */}
+          <div className="space-y-3 pt-4">
+
+            
+
+            <div className="flex flex-col sm:flex-row gap-3">
+
+              <a
+                href={flyerPath}
+                target="_blank"
+                className="btn-secondary flex-1 text-center"
+              >
+                View flyer
+              </a>
+
+              <a
+                href={flyerPath}
+                download="Kateryna-Havryna-Flyer.pdf"
+                className="btn-primary flex-1 text-center"
+              >
+                Download flyer
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -101,8 +131,6 @@ export default function Contact() {
               </p>
             </div>
           </div>
-
-        
 
         </div>
 

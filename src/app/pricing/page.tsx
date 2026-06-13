@@ -15,6 +15,27 @@ export default function Pricing() {
             Transparent pricing for modern web development. Flexible depending on project complexity.
           </p>
 
+          {/* FLYER BUTTONS (ADDED) */}
+          <div className="flex flex-col sm:flex-row gap-3 pt-4">
+
+            <a
+              href="/Kateryna-Havryna-Flyer.pdf"
+              target="_blank"
+              className="btn-secondary flex-1 text-center"
+            >
+              View flyer
+            </a>
+
+            <a
+              href="/Kateryna-Havryna-Flyer.pdf"
+              download="Kateryna-Havryna-Flyer.pdf"
+              className="btn-primary flex-1 text-center"
+            >
+              Download flyer
+            </a>
+
+          </div>
+
         </div>
 
         {/* RIGHT SIDE */}
@@ -77,9 +98,8 @@ export default function Pricing() {
 
             <ul className="space-y-2 text-white/60 text-sm">
               <li>✓ Frontend (React, Next.js)</li>
-<li>✓ Backend (Node.js, Express)</li>
-<li>✓ Database (MongoDB)</li>
-              <li>✓ Database integration</li>
+              <li>✓ Backend (Node.js, Express)</li>
+              <li>✓ Database (MongoDB)</li>
               <li>✓ Authentication system</li>
               <li>✓ API development</li>
             </ul>
@@ -95,9 +115,9 @@ export default function Pricing() {
 
             <div className="card p-6 rounded-2xl space-y-2">
               <h3 className="font-semibold">Additional Page</h3>
-              <ul className="text-white/60 text-sm space-y-1">
-                <li>✓ Extra pages for your website</li>
-              </ul>
+              <p className="text-white/60 text-sm">
+                ✓ Extra pages for your website
+              </p>
               <p className="text-xl font-bold mt-2">$40–$60 / page</p>
 
               <a href="/contact" className="text-emerald-400 text-sm mt-3 inline-block">
@@ -107,11 +127,9 @@ export default function Pricing() {
 
             <div className="card p-6 rounded-2xl space-y-2">
               <h3 className="font-semibold">Website Optimization</h3>
-              <ul className="text-white/60 text-sm space-y-1">
-                <li>✓ Speed optimization</li>
-                <li>✓ SEO improvements</li>
-                <li>✓ Performance tuning</li>
-              </ul>
+              <p className="text-white/60 text-sm">
+                ✓ Speed optimization, SEO improvements, performance tuning
+              </p>
               <p className="text-xl font-bold mt-2">$120–$180</p>
 
               <a href="/contact" className="text-emerald-400 text-sm mt-3 inline-block">
@@ -126,11 +144,9 @@ export default function Pricing() {
 
             <div className="card p-6 rounded-2xl space-y-2">
               <h3 className="font-semibold">Basic Maintenance</h3>
-              <ul className="text-white/60 text-sm space-y-1">
-                <li>✓ Bug fixes</li>
-                <li>✓ Content updates</li>
-                <li>✓ Minor changes</li>
-              </ul>
+              <p className="text-white/60 text-sm">
+                ✓ Bug fixes, content updates, minor changes
+              </p>
 
               <p className="text-xl font-bold mt-2">$50 / month</p>
 
@@ -141,11 +157,9 @@ export default function Pricing() {
 
             <div className="card p-6 rounded-2xl space-y-2">
               <h3 className="font-semibold">Pro Maintenance</h3>
-              <ul className="text-white/60 text-sm space-y-1">
-                <li>✓ Priority support</li>
-                <li>✓ Updates & improvements</li>
-                <li>✓ Security monitoring</li>
-              </ul>
+              <p className="text-white/60 text-sm">
+                ✓ Priority support, updates, security monitoring
+              </p>
 
               <p className="text-xl font-bold mt-2">$100 / month</p>
 
