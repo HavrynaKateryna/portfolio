@@ -1,3 +1,6 @@
+import "./globals.css";
+import Header from "../components/Header";
+
 export const metadata = {
   metadataBase: new URL("https://www.katerynahavryna.com"),
 
@@ -60,3 +63,28 @@ export const metadata = {
     "google-site-verification": "Nw3d3cF8RZXiyOFS-DhYDNZmR3SD-gkGN_uLc_5WRB8",
   },
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="relative min-h-screen bg-black text-white overflow-x-hidden">
+        <div className="bg">
+          <div className="blob1" />
+          <div className="blob2" />
+        </div>
+
+        <div className="noise" />
+
+        <Header />
+
+        <main className="relative z-10 pt-0">
+          {children}
+        </main>
+      </body>
+    </html>
+  );
+}
