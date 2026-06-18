@@ -70,13 +70,7 @@ export default function Hero() {
               Contact me
             </a>
 
-            <a
-              href="https://github.com/HavrynaKateryna"
-              target="_blank"
-              className="btn-secondary"
-            >
-              GitHub
-            </a>
+         
 
             <a
               href="https://www.linkedin.com/in/kateryna-havryna/"

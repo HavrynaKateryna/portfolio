@@ -106,20 +106,7 @@ export default function Contact() {
             </div>
           </a>
 
-          {/* GITHUB */}
-          <a
-            href="https://github.com/HavrynaKateryna"
-            target="_blank"
-            className="card p-5 rounded-2xl flex items-start gap-3 border border-white/10 bg-white/5"
-          >
-            <FiGithub className="text-emerald-400 mt-1" />
-            <div>
-              <p className="text-white/50 text-sm">GitHub</p>
-              <p className="text-white font-medium mt-1">
-                github.com/HavrynaKateryna
-              </p>
-            </div>
-          </a>
+         
 
           {/* LOCATION */}
           <div className="card p-5 rounded-2xl flex items-start gap-3 border border-white/10 bg-white/5">

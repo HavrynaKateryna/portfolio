@@ -7,7 +7,7 @@ export const projects = [
       image: "/projects/rentalcar.jpg",
     
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Formik", "TanStack Query"],
-    github: "https://github.com/HavrynaKateryna/rental-car",
+    
     live: "https://rental-car-5lyr.vercel.app/",
   
   },
@@ -19,7 +19,7 @@ export const projects = [
       "Landing page for tree cutting services with order forms and responsive React UI.",
     image: "/projects/treeservice.jpg",
     stack: ["React", "TypeScript", "React Router", "Framer Motion", "Axios", "EmailJS"],
-    github: "https://github.com/HavrynaKateryna/treecut-site",
+    
     live: "https://treecut-site-fgt5.vercel.app/",
     
   },
@@ -31,7 +31,7 @@ export const projects = [
       "Pregnancy support web app with weekly tracking, diary, and task system built with Next.js.",
     image: "/projects/leleka.jpg",
     stack: ["Next.js", "TypeScript", "React Query", "Zustand", "Formik"],
-    github: "https://github.com/Kostya088/stork-frontend",
+    
     live: "https://stork-frontend.vercel.app/",
     
   },
@@ -43,7 +43,7 @@ export const projects = [
       "Team project with UI components and GitHub workflow.",
     image: "/projects/coffejoy.jpg",
     stack: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/Riky-Droyg/coffeejoy-project",
+   
     live: "https://riky-droyg.github.io/coffeejoy-project/",
     
   },
@@ -55,7 +55,7 @@ export const projects = [
       "REST API integration and interactive UI components.",
     image: "/projects/lapky.jpg",
     stack: ["JavaScript", "REST API"],
-    github: "https://github.com/denis-ovcharov/animals-goit-project",
+    
     live: "https://denis-ovcharov.github.io/animals-goit-project/",
    
   },
@@ -67,7 +67,7 @@ export const projects = [
       "Authentication system with protected routes and login/register flow.",
     image: "/projects/auth.jpg",
     stack: ["Next.js", "TypeScript", "Zustand"],
-    github: "https://github.com/HavrynaKateryna/09-auth",
+    
     live: "https://09-auth-2yso.vercel.app/sign-up",
     
   },
