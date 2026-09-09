@@ -32,7 +32,7 @@ export const projects = [
       "EmailJS",
     ],
 
-    live: "www.jaxtreeworks.com",
+    live: "https://www.jaxtreeworks.com/",
   },
 
   // 3. LELEKA
