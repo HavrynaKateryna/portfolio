@@ -4,12 +4,17 @@ export const projects = [
     title: "RentalCar",
     description:
       "Modern car rental app with filtering, pagination, booking system and responsive UI.",
-      image: "/projects/rentalcar.jpg",
-    
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Formik", "TanStack Query"],
-    
+    image: "/projects/rentalcar.jpg",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Formik",
+      "TanStack Query",
+    ],
+
     live: "https://rental-car-5lyr.vercel.app/",
-  
   },
 
   // 2. TREECUT
@@ -18,10 +23,16 @@ export const projects = [
     description:
       "Landing page for tree cutting services with order forms and responsive React UI.",
     image: "/projects/treeservice.jpg",
-    stack: ["React", "TypeScript", "React Router", "Framer Motion", "Axios", "EmailJS"],
-    
-    live: "https://treecut-site-fgt5.vercel.app/",
-    
+    stack: [
+      "React",
+      "TypeScript",
+      "React Router",
+      "Framer Motion",
+      "Axios",
+      "EmailJS",
+    ],
+
+    live: "www.jaxtreeworks.com",
   },
 
   // 3. LELEKA
@@ -30,10 +41,15 @@ export const projects = [
     description:
       "Pregnancy support web app with weekly tracking, diary, and task system built with Next.js.",
     image: "/projects/leleka.jpg",
-    stack: ["Next.js", "TypeScript", "React Query", "Zustand", "Formik"],
-    
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "React Query",
+      "Zustand",
+      "Formik",
+    ],
+
     live: "https://stork-frontend.vercel.app/",
-    
   },
 
   // 4. COFFEEJOY
@@ -43,9 +59,8 @@ export const projects = [
       "Team project with UI components and GitHub workflow.",
     image: "/projects/coffejoy.jpg",
     stack: ["JavaScript", "HTML", "CSS"],
-   
+
     live: "https://riky-droyg.github.io/coffeejoy-project/",
-    
   },
 
   // 5. KHATYNKA LAPOK
@@ -55,9 +70,8 @@ export const projects = [
       "REST API integration and interactive UI components.",
     image: "/projects/lapky.jpg",
     stack: ["JavaScript", "REST API"],
-    
+
     live: "https://denis-ovcharov.github.io/animals-goit-project/",
-   
   },
 
   // 6. AUTH APP
@@ -67,8 +81,7 @@ export const projects = [
       "Authentication system with protected routes and login/register flow.",
     image: "/projects/auth.jpg",
     stack: ["Next.js", "TypeScript", "Zustand"],
-    
+
     live: "https://09-auth-2yso.vercel.app/sign-up",
-    
   },
 ];
